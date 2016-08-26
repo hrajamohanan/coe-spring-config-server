@@ -1,0 +1,15 @@
+---
+spring:
+  application:
+    name: coe-config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:/home/ranajitjana/project/coe-spring-config
+         # searchPaths: coe-spring-config
+        # "native" is used when the native profile is active, for local tests with a classpath repo:
+        native:
+          searchLocations: classpath:offline-repository/
+server:
+  port: 8888
